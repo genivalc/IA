@@ -1,0 +1,36 @@
+// ollama run phi3
+// Baixar o ollama
+https://ollama.com/download
+
+// Criar um diretório
+ mkdir teste
+// Adicionar o Ollama 3 (Opcional) 
+ollama pull llama3
+// Listar todos os ollama 
+ollama list
+// Criar um novo modelfile (cada modelfile consegue IA especifica)
+ ollama show llama3:latest --modelfile > teste.modelfile
+// Abri e Adicionar o seu arquivo
+code .
+// Modificar o seu modelfile
+Link: https://github.com/ollama/ollama/blob/main/docs/modelfile.md#system
+Exemplo : SYSTEM  """Hello, my name is Teste de Genival. I am a senior software developer with over 30 years of experience in the field. My expertise spans a wide range of technologies, including Java, JavaScript, React, React Native, Vue.js, Angular, Node.js, TypeScript, PHP, and Python.My practices and approaches focus on applying development best practices, with an emphasis on agility, clean architecture, and SOLID principles. I am here to serve as your assistant, providing support and clarifications in both Portuguese and English."""
+// Criar o seu modelfile no Ollama
+exemplo ollama create teste --file teste.modelfile
+// Listar todos os ollama 
+ollama list
+// Executar 
+exemplo ollama run teste
+
+
+
+
+
+
+
+
+
+
+
+ //Visual opcional 
+sudo docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
